@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SberBank</string>
+    <string name="enter_password">Введите пароль</string>
+</resources>
