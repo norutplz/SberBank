@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     List<RecyclerViewCard> cards = new ArrayList<>();
     RecyclerView bankCardsRecyclerView;
     RecyclerView cardsRecyclerView;
-    List<BankCard> bankCards = new ArrayList<>();
+    List<ExpandedItem> expandedItems = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initBankCardsRecyclerView() {
-        BankCardAdapter bankCardAdapter = new BankCardAdapter(this, bankCards);
-        bankCardsRecyclerView.setAdapter(bankCardAdapter);
+        ExpandedItemAdapter expandedItemAdapter = new ExpandedItemAdapter(this, expandedItems);
+        bankCardsRecyclerView.setAdapter(expandedItemAdapter);
     }
 
     private void initTopCardsRecyclerView() {
@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setInitialBankCard() {
-        bankCards.add(new BankCard("Карты", "MASTERCARD", "10000", R.drawable.mastercard,
-                "Мир", "300", R.drawable.mir));
+        expandedItems.add(new ExpandedItem("Страхование", "Еще не застрахован?", "Застрахуй! Тут!"));
+        expandedItems.add(new ExpandedItem("Инвестиции", "Еще никуда не инвестировал?", "Молодец! Так  и надо"));
     }
 
     private void setInitialCard() {
