@@ -16,10 +16,18 @@
         android:padding="10dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/bankCardsRecyclerView"
+        android:id="@+id/expandedRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginTop="1dp"
         android:background="#5C4F4F"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nestedRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="1dp"
+        />
 </LinearLayout>

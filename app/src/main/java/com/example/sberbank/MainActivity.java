@@ -11,26 +11,55 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     List<RecyclerViewCard> cards = new ArrayList<>();
-    RecyclerView bankCardsRecyclerView;
+    RecyclerView expandedRecyclerView;
     RecyclerView cardsRecyclerView;
+    RecyclerView nestedRecyclerView;
+    RecyclerView subItemsRecyclerView;
     List<ExpandedItem> expandedItems = new ArrayList<>();
+    List<SubItem> subItems = new ArrayList<>();
+    List<Item> items = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cardsRecyclerView = findViewById(R.id.cardsRecyclerView);
-        bankCardsRecyclerView = findViewById(R.id.bankCardsRecyclerView);
+        expandedRecyclerView = findViewById(R.id.expandedRecyclerView);
+        nestedRecyclerView = findViewById(R.id.nestedRecyclerView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
+        ItemAdapter itemAdapter = new ItemAdapter(buildItemList());
+        nestedRecyclerView.setAdapter(itemAdapter);
+        nestedRecyclerView.setLayoutManager(layoutManager);
         setInitialCard();
         setInitialBankCard();
         initTopCardsRecyclerView();
         initBankCardsRecyclerView();
 
+
+
     }
+
+    private List<Item> buildItemList() {
+        List<Item> itemList = new ArrayList<>();
+
+        Item item = new Item("Карты", buildSubItemList());
+        itemList.add(item);
+
+        return itemList;
+    }
+
+    private List<SubItem> buildSubItemList() {
+        List<SubItem> subItemList = new ArrayList<>();
+        subItemList.add(new SubItem("Mastercard", "10000", R.drawable.mastercard));
+        subItemList.add(new SubItem("Мир", "300", R.drawable.mir));
+
+        return subItemList;
+    }
+
 
     private void initBankCardsRecyclerView() {
         ExpandedItemAdapter expandedItemAdapter = new ExpandedItemAdapter(this, expandedItems);
-        bankCardsRecyclerView.setAdapter(expandedItemAdapter);
+        expandedRecyclerView.setAdapter(expandedItemAdapter);
     }
 
     private void initTopCardsRecyclerView() {
