@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cardsRecyclerView = findViewById(R.id.cardsRecyclerView);
-        expandedRecyclerView = findViewById(R.id.expandedRecyclerView);
         nestedRecyclerView = findViewById(R.id.nestedRecyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
         ItemAdapter itemAdapter = new ItemAdapter(buildItemList());
@@ -30,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         setInitialCard();
         setInitialBankCard();
         initTopCardsRecyclerView();
-        initBankCardsRecyclerView();
     }
 
     private List<Item> buildItemList() {
@@ -45,12 +43,6 @@ public class MainActivity extends AppCompatActivity {
         subItemList.add(new SubItem("Mastercard", "10000", R.drawable.mastercard));
         subItemList.add(new SubItem("Мир", "300", R.drawable.mir));
         return subItemList;
-    }
-
-
-    private void initBankCardsRecyclerView() {
-        ExpandedItemAdapter expandedItemAdapter = new ExpandedItemAdapter(this, expandedItems);
-        expandedRecyclerView.setAdapter(expandedItemAdapter);
     }
 
     private void initTopCardsRecyclerView() {
