@@ -6,4 +6,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="expandable_cards_recyclerview">Карты</string>
+    <string name="phone_call_center">Звякнуть</string>
+    <string name="buy_some_tariff_plan">ЗаШОПиться</string>
+    <string name="check_balance">Баланс</string>
 </resources>

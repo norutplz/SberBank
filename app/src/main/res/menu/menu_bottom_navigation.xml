@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_call"
+        android:icon="@drawable/ic_baseline_phone_24"
+        android:title="@string/phone_call_center"/>
+    <item
+        android:id="@+id/action_shop"
+        android:icon="@drawable/ic_baseline_add_shopping_cart_24"
+        android:title="@string/buy_some_tariff_plan" />
+    <item
+        android:id="@+id/action_balance"
+        android:icon="@drawable/ic_baseline_account_balance_24"
+        android:title="@string/check_balance" />
+</menu>

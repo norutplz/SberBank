@@ -14,10 +14,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView expandedRecyclerView;
     RecyclerView cardsRecyclerView;
     RecyclerView nestedRecyclerView;
-    RecyclerView subItemsRecyclerView;
     List<ExpandedItem> expandedItems = new ArrayList<>();
-    List<SubItem> subItems = new ArrayList<>();
-    List<Item> items = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +31,12 @@ public class MainActivity extends AppCompatActivity {
         setInitialBankCard();
         initTopCardsRecyclerView();
         initBankCardsRecyclerView();
-
-
-
     }
 
     private List<Item> buildItemList() {
         List<Item> itemList = new ArrayList<>();
-
         Item item = new Item("Карты", buildSubItemList());
         itemList.add(item);
-
         return itemList;
     }
 
@@ -52,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         List<SubItem> subItemList = new ArrayList<>();
         subItemList.add(new SubItem("Mastercard", "10000", R.drawable.mastercard));
         subItemList.add(new SubItem("Мир", "300", R.drawable.mir));
-
         return subItemList;
     }
 

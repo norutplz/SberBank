@@ -19,15 +19,30 @@
         android:id="@+id/expandedRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginTop="1dp"
-        android:background="#5C4F4F"/>
+        android:background="#5C4F4F"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/nestedRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginTop="1dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@color/bottom_navigation_item_background_colors"
+        app:itemTextColor="@color/bottom_navigation_item_background_colors"
+        app:menu="@menu/menu_bottom_navigation"
         />
+
+</RelativeLayout>
 </LinearLayout>
