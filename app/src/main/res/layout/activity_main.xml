@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_activity_background"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,9 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="175dp"
         android:layout_marginTop="5dp"
-        android:background="#000000"
-        android:padding="10dp" />
+        android:padding="@dimen/default_padding" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_divider_height"
+        android:background="#736969" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/nestedRecyclerView"
@@ -22,20 +26,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="@color/bottom_navigation_item_background_colors"
-        app:itemTextColor="@color/bottom_navigation_item_background_colors"
-        app:menu="@menu/menu_bottom_navigation"
-        />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="@color/bottom_navigation_item_background_colors"
+            app:itemTextColor="@color/bottom_navigation_item_background_colors"
+            app:menu="@menu/menu_bottom_navigation" />
 
-</RelativeLayout>
+    </RelativeLayout>
 </LinearLayout>

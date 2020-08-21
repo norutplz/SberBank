@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -19,8 +20,8 @@
 
             <ImageView
                 android:id="@+id/subItemImageView"
-                android:layout_width="68dp"
-                android:layout_height="52dp"
+                android:layout_width="@dimen/sub_item_image_width"
+                android:layout_height="@dimen/sub_item_image_height"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
                 app:layout_constraintStart_toStartOf="parent"
@@ -31,20 +32,20 @@
                 android:id="@+id/subItemNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="MIR"
-                android:textSize="20sp"
+                tools:text="MIR"
+                android:textSize="@dimen/sub_item_name_size"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/subItemMoneyTextView"
+                app:layout_constraintStart_toStartOf="@+id/subItemDescriptionTextView"
                 app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/subItemMoneyTextView"
+                    android:id="@+id/subItemDescriptionTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="19dp"
                     android:layout_marginTop="1dp"
-                    android:text="10000"
-                    android:textSize="18sp"
+                    tools:text="10000"
+                    android:textSize="@dimen/sub_item_description_size"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/subItemImageView"
                     app:layout_constraintTop_toBottomOf="@+id/subItemNameTextView" />

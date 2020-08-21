@@ -5,6 +5,15 @@ import java.util.List;
 public class Item {
     private String itemTitle;
     private List<SubItem> subItemList;
+    private boolean expanded;
+
+    public boolean isExpanded() {
+        return expanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        this.expanded = expanded;
+    }
 
     public Item(String itemTitle, List<SubItem> subItemList) {
         this.itemTitle = itemTitle;

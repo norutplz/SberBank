@@ -5,4 +5,19 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="cardsRecyclerViewHeight">150dp</dimen>
+    <dimen name="default_padding">10dp</dimen>
+    <dimen name="default_layout_margin">12dp</dimen>
+    <dimen name="default_card_elevation">8dp</dimen>
+    <dimen name="sub_item_image_width">68dp</dimen>
+    <dimen name="sub_item_image_height">52dp</dimen>
+    <dimen name="sub_item_name_size">20sp</dimen>
+    <dimen name="sub_item_description_size">18sp</dimen>
+    <dimen name="main_item_title_size">18sp</dimen>
+    <dimen name="default_divider_height">2dp</dimen>
+    <dimen name="top_card_width">100dp</dimen>
+    <dimen name="top_card_height">150dp</dimen>
+    <dimen name="card_view_corner_radius">10dp</dimen>
+    <dimen name="top_card_action_size">10sp</dimen>
+    <dimen name="top_card_image_height">80dp</dimen>
+    <dimen name="top_card_name_size">12sp</dimen>
 </resources>

@@ -11,7 +11,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     List<RecyclerViewCard> cards = new ArrayList<>();
-    RecyclerView expandedRecyclerView;
     RecyclerView cardsRecyclerView;
     RecyclerView nestedRecyclerView;
     List<ExpandedItem> expandedItems = new ArrayList<>();

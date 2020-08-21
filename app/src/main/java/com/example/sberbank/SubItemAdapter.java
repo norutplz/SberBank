@@ -46,7 +46,7 @@ public class SubItemAdapter extends RecyclerView.Adapter<SubItemAdapter.SubItemV
         SubItemViewHolder(View itemView) {
             super(itemView);
             subItemImageView = itemView.findViewById(R.id.subItemImageView);
-            subItemMoneyTextView = itemView.findViewById(R.id.subItemMoneyTextView);
+            subItemMoneyTextView = itemView.findViewById(R.id.subItemDescriptionTextView);
             subItemNameTextView = itemView.findViewById(R.id.subItemNameTextView);
         }
     }
